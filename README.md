@@ -5,6 +5,8 @@ This is modification of sapphonie's srcds Dockerfiles which includes all files n
 
 Note: this container can run bash if no args are passed or if `bash` is passed in the startup options.
 
+Due to trouble with Docker Desktop, we use [GitHub Docker Packages](https://github.com/features/packages) for automated creation.
+
 Usage:
 
 ```
