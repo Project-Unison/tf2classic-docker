@@ -1,16 +1,16 @@
 # ----------------------------------
 # Pterodactyl Panel Dockerfile
-# Environment: Source Engine
+# Environment: Team Fortress 2 Classic
 # ----------------------------------
-FROM        debian:bullseye-slim
+FROM        debian:bookworm-slim
 
-LABEL       author="Pterodactyl Software - edited by sapphonie" maintainer="sappho@sappho.io"
+LABEL       author="Pterodactyl Software - edited by sapphonie and Roon" maintainer="https://github.com/RoonMoonlight"
 
 ENV         DEBIAN_FRONTEND noninteractive
 ENV         TERM screen
 
 # Upgrade our base system first
-RUN         tput setaf 2; echo "apt-get Upgrading base image..."; tput sgr0; \
+RUN         tput setaf 2; echo "TF2C Docker Script 12 'Bookworm' by Roon - a modification of Pterodactyl Docker File by Pterodactyl Software and sapphonie"; echo "Upgrading base image..."; tput sgr0; \
             apt-get update \
             && apt-get upgrade -y --no-install-recommends
 
@@ -36,7 +36,7 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             # needed for some sourcemod extensions
             curl wget libcurl4:i386 \
             # helpful tools
-            python valgrind gdb tmux \
+            python3 valgrind gdb tmux \
             # needed for steamcmd
             ca-certificates
 
