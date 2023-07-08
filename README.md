@@ -11,7 +11,7 @@ Due to trouble with Docker Desktop, we use [GitHub Docker Packages](https://gith
 Usage:
 
 ```
-docker run -it ghcr.io/roonmoonlight/srcds-tf2c-debian:bullseye
+docker run -it ghcr.io/roonmoonlight/srcds-tf2c-debian:bookworm
 ```
 
 ### Note
