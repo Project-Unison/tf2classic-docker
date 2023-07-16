@@ -16,4 +16,3 @@ docker run -it --expose 27015 ghcr.io/roonmoonlight/srcds-tf2c-debian:bookworm
 
 ### Note
 * This Docker scripts prepares everything dependencies to install TF2C Server, and does NOT automatically install TF2C server.
-* It is recommended to use with @sapphonie's [SRCDS Hardening Tool](https://github.com/sapphonie/tf2-srcds-hardening-iptables-docker) for maximum security.
