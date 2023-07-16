@@ -36,9 +36,12 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             # needed for some sourcemod extensions
             curl wget libcurl4:i386 \
             # helpful tools
-            python3 valgrind gdb tmux \
+            python3 valgrind gdb tmux nano \
             # needed for steamcmd
             ca-certificates
+
+# set nano as default editor
+RUN         update-alternatives --set editor /usr/bin/nano
 
 # set up our container user
 RUN         tput setaf 2; echo "Creating container user..."; tput sgr0; \
