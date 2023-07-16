@@ -41,7 +41,7 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             ca-certificates
 
 # set nano as default editor
-RUN         update-alternatives --set editor /usr/bin/nano
+RUN         update-alternatives --set editor /bin/nano
 
 # set up our container user
 RUN         tput setaf 2; echo "Creating container user..."; tput sgr0; \
