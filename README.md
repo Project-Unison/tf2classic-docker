@@ -6,14 +6,13 @@ This is modification of sapphonie's srcds Dockerfiles which includes all files n
 Note: this container can run bash if no args are passed or if `bash` is passed in the startup options.
 
 ### How to use
-Due to trouble with Docker Desktop, we use [GitHub Docker Packages](https://github.com/features/packages) for automated creation.
+Due to trouble with Docker Desktop, we use [GitHub Docker Packages](https://github.com/features/packages) for automated creation. To allow anyone to join your server, don't forget to expose your port (By default it is 27015 but can be changed) before creating the docker instances.
 
 Usage:
 
 ```
-docker run -it ghcr.io/roonmoonlight/srcds-tf2c-debian:bookworm
+docker run -it --expose 27015 ghcr.io/roonmoonlight/srcds-tf2c-debian:bookworm
 ```
 
 ### Note
 * This Docker scripts prepares everything dependencies to install TF2C Server, and does NOT automatically install TF2C server.
-* It is recommended to use with @sapphonie's [SRCDS Hardening Tool](https://github.com/sapphonie/tf2-srcds-hardening-iptables-docker) for maximum security.
