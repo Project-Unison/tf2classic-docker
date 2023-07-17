@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "bookworm" ]
+    branches: [ "bookworm-core" ]
   pull_request:
-    branches: [ "bookworm" ]
+    branches: [ "bookworm-core" ]
 
 jobs:
 

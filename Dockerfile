@@ -1,6 +1,6 @@
 # ----------------------------------
 # Pterodactyl Panel Dockerfile
-# Environment: Team Fortress 2 Classic
+# Environment: All Source Engine Games
 # ----------------------------------
 FROM        debian:bookworm-slim
 
@@ -10,7 +10,7 @@ ENV         DEBIAN_FRONTEND noninteractive
 ENV         TERM screen
 
 # Upgrade our base system first
-RUN         tput setaf 2; echo "TF2C Docker Script 12 'Bookworm' by Roon - a modification of Pterodactyl Docker File by Pterodactyl Software and sapphonie"; echo "Upgrading base image..."; tput sgr0; \
+RUN         tput setaf 2; echo "SRCDS Docker Script 12 'Bookworm' by Roon - a modification of Pterodactyl Docker File by Pterodactyl Software and sapphonie"; echo "Upgrading base image..."; tput sgr0; \
             apt-get update \
             && apt-get upgrade -y --no-install-recommends
 
@@ -31,8 +31,8 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             && apt-get install -y --no-install-recommends \ 
             # needed for ip route stuff in entrypoint.sh
             net-tools iproute2 \
-            # For TF2C dependencies
-            unzip aria2 lib32z1 libncurses5:i386 libbz2-1.0:i386 lib32gcc-s1 lib32stdc++6 libtinfo5:i386 libcurl3-gnutls:i386 libsdl2-2.0-0:i386 libcurl4-gnutls-dev libcurl4-gnutls-dev:i386 libxcb1 libxcb1:i386 \
+            # For SRCDS dependencies
+            lib32z1 libbz2-1.0:i386 lib32gcc-s1 lib32stdc++6 libncurses5:i386 libsdl2-2.0-0:i386 lib32stdc++6 libtinfo5:i386 libcurl4-gnutls-dev:i386 \
             # needed for some sourcemod extensions
             curl wget libcurl4:i386 \
             # helpful tools
@@ -41,7 +41,8 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             ca-certificates
 
 # set nano as default editor
-RUN         update-alternatives --set editor /bin/nano
+RUN         tput setaf 2; echo "Setting nano as default editor..."; tput sgr0; \
+            update-alternatives --set editor /bin/nano
 
 # set up our container user
 RUN         tput setaf 2; echo "Creating container user..."; tput sgr0; \
