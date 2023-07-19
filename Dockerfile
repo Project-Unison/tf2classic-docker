@@ -36,7 +36,7 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             # needed for some sourcemod extensions
             curl wget libcurl4:i386 \
             # helpful tools
-            python3 valgrind gdb tmux nano add-apt-repository \
+            python3 valgrind gdb tmux nano software-properties-common \
             # needed for steamcmd
             ca-certificates;
             # Adds non-free repository
