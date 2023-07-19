@@ -36,9 +36,15 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             # needed for some sourcemod extensions
             curl wget libcurl4:i386 \
             # helpful tools
-            python3 valgrind gdb tmux nano \
+            python3 valgrind gdb tmux nano add-apt-repository \
             # needed for steamcmd
-            ca-certificates
+            ca-certificates;
+            # Adds non-free repository
+            add-apt-repository non-free \
+            && apt-get update \
+            && apt-get install -y --no-install-recommends \
+            # installs steamcmd
+            steamcmd
 
 # set nano as default editor
 RUN         tput setaf 2; echo "Setting nano as default editor..."; tput sgr0; \
