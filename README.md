@@ -8,7 +8,7 @@ Note: this container can run bash if no args are passed or if `bash` is passed i
 ## Difference with sapphonie's Dockerfiles
 * Supports most Source Engine servers. Source 2 support is planned in the future.
 * Compatible with latest Debian-slim releases.
-* Adds useful tools `tmux` and `nano`, as well as `steamcmd` included by default.
+* Adds useful tools `tmux` and `nano` included by default.
 * Adds [Team Fortress 2 Classic](https://tf2classic.com) support.
 
 ## Requirements

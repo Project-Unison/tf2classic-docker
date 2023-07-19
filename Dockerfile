@@ -38,13 +38,7 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             # helpful tools
             python3 valgrind gdb tmux nano software-properties-common \
             # needed for steamcmd
-            ca-certificates;
-            # Adds non-free repository
-            add-apt-repository non-free \
-            && apt-get update \
-            && apt-get install -y --no-install-recommends \
-            # installs steamcmd
-            steamcmd
+            ca-certificates
 
 # set nano as default editor
 RUN         tput setaf 2; echo "Setting nano as default editor..."; tput sgr0; \
