@@ -21,7 +21,7 @@ Due to trouble with Docker Desktop, we use [GitHub Docker Packages](https://gith
 As of Dec 15 2023, the core version is deprecated and will no longer receive any updates to focus more on TF2Classic.
 
 ```
-docker run -it --name tf2cserver --restart unless-stopped ghcr.io/roonmoonlight/srcds-tf2c-debian:bookworm
+docker run -it --name tf2cserver --restart unless-stopped ghcr.io/roonmoonlight/srcds-tf2c-debian:latest
 ```
 
 ## Note
