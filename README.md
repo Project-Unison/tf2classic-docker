@@ -1,4 +1,3 @@
-
 # TF2Classic Docker Container
 [Pterodactyl Panel](https://pterodactyl.io/) docker source engine image, originally forked from [their upstream](https://github.com/parkervcp/images/tree/ubuntu/source), but cleaned up and converted to use debian-slim and less dependencies, saving ~300MB per server instance.
 
@@ -26,7 +25,7 @@ To allow anyone to join your server, don't forget to expose your port (By defaul
 ### Use with Docker
 #### For most Source Engine servers
 ```
-docker run -it --name tf2cserver --restart unless-stopped ghcr.io/roonmoonlight/srcds-tf2c-debian:latest
+docker run -it --name tf2cserver --restart unless-stopped ghcr.io/project-unison/tf2classic-docker:latest
 ```
 
 ## Note
