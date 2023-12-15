@@ -20,9 +20,6 @@ Due to trouble with Docker Desktop, we use [GitHub Docker Packages](https://gith
 ### Use with Docker
 As of Dec 15 2023, the core version is deprecated and will no longer receive any updates to focus more on TF2Classic.
 
-To allow anyone to join your server, don't forget to expose your port (By default it is 27015 but can be changed) before creating the docker instances. Using the rcon is highly discouraged so only UDP ports are allowed, but if you are okay with rcon, remove `/udp` after the port to allow rcon access.
-
-### Use with Docker
 **With default ports**
 ```
 docker run -it --name tf2cserver --restart unless-stopped ghcr.io/project-unison/tf2classic-docker:latest
