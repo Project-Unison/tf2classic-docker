@@ -23,9 +23,16 @@ As of Dec 15 2023, the core version is deprecated and will no longer receive any
 To allow anyone to join your server, don't forget to expose your port (By default it is 27015 but can be changed) before creating the docker instances. Using the rcon is highly discouraged so only UDP ports are allowed, but if you are okay with rcon, remove `/udp` after the port to allow rcon access.
 
 ### Use with Docker
-#### For most Source Engine servers
+**With default ports**
 ```
 docker run -it --name tf2cserver --restart unless-stopped ghcr.io/project-unison/tf2classic-docker:latest
+```
+
+**With additional ports**
+Ports can be anything, feel free to change port numbers next to -p arguments.
+
+```
+docker run -it --name tf2cserver -p 2701x:2701x -p 2702x:2702x/udp -p 2700x:2700x/udp --restart unless-stopped ghcr.io/project-unison/tf2classic-docker:latest
 ```
 
 ## Note
